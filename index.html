@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+	var zoom = 1;
+        var width = 100;
+
+        function bigger() {
+            zoom = zoom + 0.1;
+            width = 100 / zoom;
+            document.body.style.transformOrigin = "left top";
+            document.body.style.transform = "scale(" + zoom + ")";
+            document.body.style.width = width + "%";
+        }
+        function smaller() {
+            zoom = zoom - 0.1;
+            width = 100 / zoom;
+            document.body.style.transformOrigin = "left top";
+            document.body.style.transform = "scale(" + zoom + ")";
+            document.body.style.width = width + "%";
+        }
   <title>Newsletter</title>
   <style>
       body{
@@ -28,8 +45,6 @@
 </head>
 	
 <body>
-transform: scale(1.1);
-transform-origin: 0 0;
 <section>
 <h1>Subscribe to our Newsletter!</h1>
 <form name="contact" method="POST" data-netlify="true">
