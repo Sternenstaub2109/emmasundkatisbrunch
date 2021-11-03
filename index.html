@@ -14,23 +14,27 @@
         height:100px;
         width:300px;
         text-align: center;
-        vertical-align: middle;
-        margin: auto;
-        background-color:#9fdf9f;
+        margin: 15px 30px;
+		box-sizing: content-box;
+        height: 50%;
+        width: 82%;
+        background-color: #9fdf9f;
       }
       button{
         width:100px;
-        height:20px;
+        height:30px;
         background-color: #40bf40;
       }
+	  
       section{
+		align-content: center;
         font-family: "Calibri";
         position: fixed;
         top: 35%;
         left: 35%;
         box-sizing: content-box;
-        height: 30%;
-        width: 40%;
+        height: 35%;
+        width: 49%;
         background-color: #ffffff;
       }
   </style>
@@ -39,12 +43,13 @@
 <section>
 <h1>Subscribe to our Newsletter!</h1>
 <form name="contact" method="POST" data-netlify="true">
+  <p>&nbsp; </p>
+<label>email adress:
+  <input type="email" name="email" />
+</label>
   <p>
-    <label>email adress: <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
+  <button type="submit">Send</button>
+</p>
 </form>
 </section>
 </body>
